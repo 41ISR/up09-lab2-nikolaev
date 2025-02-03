@@ -1,0 +1,6 @@
+.chat-box {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: black;
+    height: 100vh;
+}

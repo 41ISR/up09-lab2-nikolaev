@@ -1,0 +1,38 @@
+.autoriz{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+.bg{
+    background-color: rgba(220, 20, 60, 0.5);
+    width: 200px;
+    height: 200px;
+    border-radius: 30px;
+}
+.h1{
+    text-align: center;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input{
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    border-radius: 20px;
+    height: 30px;
+    padding: 0 10px;
+}
+
+.btn{
+    margin-top: 20px;
+    border: none;
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
