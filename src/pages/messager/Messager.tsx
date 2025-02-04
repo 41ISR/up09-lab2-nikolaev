@@ -5,9 +5,9 @@ import "./messager.css"
 export const Messager = () =>{
 
     return(
-        <>
+        <div className="main">
             <Sidebar />
             <Chatroom />
-        </>
+        </div>
     )
 }

@@ -12,6 +12,12 @@ export const Input = ({placeholder, className} : InputArg) => {
     }
 
     return(
-        <input type="text" required className={_className.join(" ")} placeholder={placeholder} />
+        <input 
+        type="text" 
+        required 
+        className={_className.join(" ")} 
+        placeholder={placeholder} 
+        spellCheck="false"
+        />
     )
 }

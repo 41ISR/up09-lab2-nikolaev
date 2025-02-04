@@ -6,7 +6,7 @@ interface IButton extends PropsWithChildren {
 
 export const Button = ({children, onClick}: IButton) => {
     return(
-        <button className="btn" onClick={onClick}>
+        <button className="btn" onClick={onClick} type="submit">
             {children}
         </button>
     )

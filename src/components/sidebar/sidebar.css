@@ -1,4 +1,6 @@
-.main{
-    background-color: brown;
+.sidebar{
+    background-color: rgb(70, 70, 70);
     height: 100vh;
+    display: grid;
+    grid-column: 1 / 2;
 }
