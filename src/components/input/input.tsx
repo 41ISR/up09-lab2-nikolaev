@@ -2,9 +2,11 @@
 interface InputArg{
     placeholder?: string
     className?: string
+    value?: string | number | readonly string[]
+    onChange: React.ChangeEventHandler<HTMLInputElement>
 }
 
-export const Input = ({placeholder, className} : InputArg) => {
+export const Input = ({placeholder, className, value, onChange} : InputArg) => {
     const _className = ["input"]
     
     if (className) {
@@ -18,6 +20,8 @@ export const Input = ({placeholder, className} : InputArg) => {
         className={_className.join(" ")} 
         placeholder={placeholder} 
         spellCheck="false"
+        value={value}
+        onChange={onChange}
         />
     )
 }

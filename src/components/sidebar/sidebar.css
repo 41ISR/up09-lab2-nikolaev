@@ -1,6 +1,22 @@
-.sidebar{
+.sidebar {
     background-color: rgb(70, 70, 70);
     height: 100vh;
     display: grid;
     grid-column: 1 / 2;
+    /* color: var(--color-accent); */
+}
+
+.nav {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+.nav__btn-box {
+    width: 100%;
+    text-align: center;
+}
+.nav__btn {
+    width: 50%;
+    text-align: center;
+    color: var(--color-accent)
 }

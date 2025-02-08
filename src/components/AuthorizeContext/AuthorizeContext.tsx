@@ -1,11 +1,12 @@
 import { useEffect } from "react";
 import { Outlet, useNavigate } from "react-router-dom";
+import { UserStore } from "../../shared/zustandStore/UserStore";
 
 const AuthorizeContext = () => {
-    const auth = true
-    const navigate = useNavigate()
+    const {userId} = UserStore()
+    
     useEffect(() => {
-        if (!auth) {
+        if (!userId) {
             navigate("/login")
         }
     }, [])
