@@ -5,6 +5,9 @@ interface IUserStore {
   userId: string,
   setUserId: (id: string) => void
 }
+
+
+
 export const UserStore = create<IUserStore>()(
   persist(
     (set) => ({

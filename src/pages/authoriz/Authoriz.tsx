@@ -4,6 +4,9 @@ import { Button } from "../../components/button/button"
 import { UserStore } from "../../shared/zustandStore/UserStore"
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
+import axios from "axios"
+import { URLs } from "../../app/router/urls"
+import { api } from "../../shared/api/api"
 
 export const Autoriz = () => {
     const { setUserId } = UserStore(state => state)
@@ -11,10 +14,18 @@ export const Autoriz = () => {
     const [id, setId] = useState('');// кароч useState чтоб вытаскивать Id из инпута и после использовать его 
     const navigate = useNavigate()
     
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+        // setUserId(id)
+        // navigate("/")
         e.preventDefault()
-        setUserId(id)
-        navigate("/")
+        try {
+            // const response = await axios.post("http://localhost:3000/login", { id: id });
+            const res = await api.login(id)
+            setUserId(res);
+            navigate(URLs.CHAT);
+          } catch (error) {
+            console.error("Login error:", error);
+          }
     }
 
     return (

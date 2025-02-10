@@ -3,7 +3,7 @@ interface InputArg{
     placeholder?: string
     className?: string
     value?: string | number | readonly string[]
-    onChange: React.ChangeEventHandler<HTMLInputElement>
+    onChange?: React.ChangeEventHandler<HTMLInputElement>
 }
 
 export const Input = ({placeholder, className, value, onChange} : InputArg) => {

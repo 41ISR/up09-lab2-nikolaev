@@ -4,6 +4,7 @@ import { UserStore } from "../../shared/zustandStore/UserStore";
 
 const AuthorizeContext = () => {
     const {userId} = UserStore()
+    const navigate = useNavigate()
     
     useEffect(() => {
         if (!userId) {
